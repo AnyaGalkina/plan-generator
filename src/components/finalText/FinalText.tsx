@@ -39,10 +39,10 @@ export const FinalText = ({
             </div>
 
             <div id={'finalText'}>
-                <h3 style={{margin: '5px 0'}}>План на следующую тренировку.</h3>
-                <div>
+                <p>
+                    <h3 style={{margin: '0 0 6px 0'}}>План на следующую тренировку.</h3>
                     <span>Программа недели </span><span>{week}:</span>
-                </div>
+                </p>
 
                 <p>
                     <span> — Разминка: выбери видео "{warmUpPlan}"</span>
