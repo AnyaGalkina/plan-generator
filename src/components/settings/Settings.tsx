@@ -8,19 +8,16 @@ const levels = [
     // 'Intro',
     // 'Fit 1',
     'Fit 2'];
-const weeks = ['06.02-12.02', '13.02-19.02', '20.02-26.02', '27.02-05.03', '06.03-12.03', '13.03-19.03', '20.03-26.03', '27.03-02.04', '03.04-09.04',
-
-
-];
+const weeks = ['06.02-12.02', '13.02-19.02', '20.02-26.02', '27.02-05.03', '06.03-12.03', '13.03-19.03', '20.03-26.03', '27.03-02.04', '03.04-09.04'];
 const warmUp = ['универсальная', 'на продольник', 'на складку', 'на спину'];
-const warmUpWithPole = ['январь-февраль'];
+// const warmUpWithPole = ['январь-февраль', 'март-апрель'];
 
 type PropsType = {
     week: string;
     level: string;
     warmUpPlan: string;
-    warmUpWithPoleMonths: string;
-    handleWarmUpWithPole: (value: string) => void;
+    // warmUpWithPoleMonths: string;
+    // handleWarmUpWithPole: (value: string) => void;
     handleLevelChange: (value: string) => void;
     handleWeekChange: (value: string) => void;
     handleWarmUpPlan: (value: string) => void;
@@ -32,7 +29,7 @@ type PropsType = {
 }
 
 export const Settings = ({
-                             level, week, warmUpPlan, warmUpWithPoleMonths, handleWarmUpWithPole, handleWarmUpPlan,
+                             level, week, warmUpPlan, handleWarmUpPlan,
                              handleLevelChange, handleWeekChange, weekTrainingPlans,
                              handleTask3DescriptionChange, handleTask2DescriptionChange, handleTask1DescriptionChange
                          }: PropsType) => {
@@ -67,13 +64,12 @@ export const Settings = ({
                            onChange={handleWarmUpPlan}
                            value={warmUpPlan}
             />
-            <BasicSelector title={'Пилонная разминка'}
-                           dataArray={warmUpWithPole}
-                           onChange={handleWarmUpWithPole}
-                           value={warmUpWithPoleMonths}
-            />
+            {/*<BasicSelector title={'Пилонная разминка'}*/}
+            {/*               dataArray={warmUpWithPole}*/}
+            {/*               onChange={handleWarmUpWithPole}*/}
+            {/*               value={warmUpWithPoleMonths}*/}
+            {/*/>*/}
 
-            {/*<Divider/>*/}
             <div>
                 <h3>Основная часть тренировки:</h3>
                 <h4>1. {task1}</h4>
