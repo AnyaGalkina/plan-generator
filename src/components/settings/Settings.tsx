@@ -1,14 +1,18 @@
 import React, {ChangeEvent} from 'react';
 import {Paper} from '@mui/material';
 import styles from '../Main.module.css';
-import {BasicSelector} from '../selector/MainSelector';
+import {BasicSelector} from './selector/MainSelector';
 import {StyledTextField} from './StyledTextField';
 
 const levels = [
     // 'Intro',
-    'Fit 1', 'Fit 2'];
-const weeks = ['06.02-12.02', '13.02-19.02'];
-const warmUp = ['на спину', ''];
+    // 'Fit 1',
+    'Fit 2'];
+const weeks = ['06.02-12.02', '13.02-19.02', '20.02-26.02', '27.02-05.03', '06.03-12.03', '13.03-19.03', '20.03-26.03', '27.03-02.04', '03.04-09.04',
+
+
+];
+const warmUp = ['универсальная', 'на продольник', 'на складку', 'на спину'];
 const warmUpWithPole = ['январь-февраль'];
 
 type PropsType = {
@@ -33,6 +37,9 @@ export const Settings = ({
                              handleTask3DescriptionChange, handleTask2DescriptionChange, handleTask1DescriptionChange
                          }: PropsType) => {
 
+
+    const {task3, task1, task2} = week && weekTrainingPlans[week];
+
     const onTask1DescriptionChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         handleTask1DescriptionChange(event.currentTarget.value);
     };
@@ -45,48 +52,40 @@ export const Settings = ({
 
     return (
         <Paper elevation={1} className={styles.paperBlock}>
-            <div>
-                <BasicSelector title={'Choose Level'}
-                               dataArray={levels}
-                               onChange={handleLevelChange}
-                               value={level}
-                />
-            </div>
-            <div>
-                <BasicSelector title={'Программа недели'}
-                               dataArray={weeks}
-                               onChange={handleWeekChange}
-                               value={week}
-                />
-            </div>
-            <div>
-                <BasicSelector title={'Разминка'}
-                               dataArray={warmUp}
-                               onChange={handleWarmUpPlan}
-                               value={warmUpPlan}
-                />
-            </div>
-            <div>
-                <BasicSelector title={'Пилонная разминка'}
-                               dataArray={warmUpWithPole}
-                               onChange={handleWarmUpWithPole}
-                               value={warmUpWithPoleMonths}
-                />
-            </div>
+            {/*<BasicSelector title={'Выбери уровень'}*/}
+            {/*               dataArray={levels}*/}
+            {/*               onChange={handleLevelChange}*/}
+            {/*               value={level}*/}
+            {/*/>*/}
+            <BasicSelector title={'Программа недели'}
+                           dataArray={weeks}
+                           onChange={handleWeekChange}
+                           value={week}
+            />
+            <BasicSelector title={'Разминка'}
+                           dataArray={warmUp}
+                           onChange={handleWarmUpPlan}
+                           value={warmUpPlan}
+            />
+            <BasicSelector title={'Пилонная разминка'}
+                           dataArray={warmUpWithPole}
+                           onChange={handleWarmUpWithPole}
+                           value={warmUpWithPoleMonths}
+            />
+
+            {/*<Divider/>*/}
             <div>
                 <h3>Основная часть тренировки:</h3>
-                <h3>1. {week &&
-                    // @ts-ignore
-                    weekTrainingPlans[week].task1}</h3>
+                <h4>1. {task1}</h4>
                 <StyledTextField onChange={onTask1DescriptionChange}/>
-                <h3>2. {week &&
-                    // @ts-ignore
-                    weekTrainingPlans[week].task2}</h3>
+                <h4>2. {task2}</h4>
                 <StyledTextField onChange={onTask2DescriptionChange}/>
-                <h3>3. {week &&
-                    // @ts-ignore
-                    weekTrainingPlans[week].task3}</h3>
-                <StyledTextField onChange={onTask3DescriptionChange}/>
+                {task3 &&
+                    <>
+                        <h4>3. {task3}</h4>
+                        <StyledTextField onChange={onTask3DescriptionChange}/>
+                    </>
+                }
             </div>
         </Paper>
 

@@ -23,9 +23,9 @@ export const FinalText = ({
                               task2Description, warmUpWithPoleMonths
                           }: PropsType) => {
 
+    const task3IsShown = week && weekTrainingPlans[week].task3;
 
     const onCopyClick = () => {
-        // debugger
         let copyText: any = document.getElementById('finalText');
 
         navigator.clipboard.writeText(copyText.outerText);
@@ -33,48 +33,55 @@ export const FinalText = ({
 
     return (
         <Paper elevation={1} className={styles.paperBlock}>
-            <h2>Text to send</h2>
-            <Divider/>
+            <div>
+                <h2>Текст</h2>
+                <Divider/>
+            </div>
+
             <div id={'finalText'}>
                 <h3>План на следующую тренировку.</h3>
-                <h4></h4>
 
                 <div>
-                    <span>Программа недели </span><span>{week} :</span>
+                    <span>Программа недели </span><span>{week}:</span>
                 </div>
+                <br/>
                 <div>
                     <span> — Разминка: </span><span>{warmUpPlan}</span>
                 </div>
+                <br/>
                 <div>
                     <span> — Пилонная разминка: </span>
-                    <div>1. {warmUpWithPoleMonths &&
-                        // @ts-ignore
-                        warmUpWithPolePlan[warmUpWithPoleMonths].task1}</div>
-                    <div>2. {warmUpWithPoleMonths &&
-                        // @ts-ignore
-                        warmUpWithPolePlan[warmUpWithPoleMonths].task2}</div>
-                    <div>3. {warmUpWithPoleMonths &&
-                        // @ts-ignore
-                        warmUpWithPolePlan[warmUpWithPoleMonths].task3}</div>
+                    <div>
+                        <span>1. {warmUpWithPoleMonths && warmUpWithPolePlan[warmUpWithPoleMonths].task1}</span>
+                    </div>
+                    <div>
+                        <span>2. {warmUpWithPoleMonths && warmUpWithPolePlan[warmUpWithPoleMonths].task2} </span>
+                    </div>
+                    <div>3. {warmUpWithPoleMonths && warmUpWithPolePlan[warmUpWithPoleMonths].task3}</div>
                 </div>
+                <br/>
                 <div>
                     <h3>Основная часть тренировки:</h3>
-                    <h3>1. {week &&
-                        // @ts-ignore
-                        weekTrainingPlans[week].task1}</h3>
+                    <h4>1. {week && weekTrainingPlans[week].task1}</h4>
                     <div>{task1Description}</div>
-                    <h3>2. {week &&
-                        // @ts-ignore
-                        weekTrainingPlans[week].task2}</h3>
+                    <h4>2. {week && weekTrainingPlans[week].task2}</h4>
                     <div>{task2Description}</div>
-
-                    <h3>3. {week &&
-                        weekTrainingPlans[week].task3}</h3>
+                    {task3IsShown &&
+                        <h4>3. {weekTrainingPlans[week].task3}</h4>
+                    }
                     <div>{task3Description}</div>
-                    <h3>⁃ Заминка</h3>
+                    <br/>
+                    <div>⁃ Заминка</div>
                 </div>
             </div>
-            <Button variant={'contained'} onClick={onCopyClick}>Copy Text</Button>
+            <div style={{display: 'flex', justifyContent: 'end'}}>
+                <Button style={{margin: '40px 0',
+                    // background: '#48677c'
+                    background: '#85c9cf'
+                }} variant={'contained'} onClick={onCopyClick}>
+                    Copy Text
+                </Button>
+            </div>
         </Paper>
     );
 };

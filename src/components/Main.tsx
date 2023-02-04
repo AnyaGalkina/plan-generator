@@ -6,23 +6,58 @@ import {Settings} from './settings/Settings';
 
 const warmUpWithPolePlan = {
     'январь-февраль': {
-        task1: '111',
-        task2: '222',
-        task3: '333',
+        task1: 'Раскачка с подъемом наверх',
+        task2: 'Шоудеры с выходом в коленный зацеп',
+        task3: 'Тюльпан во флаг',
     }
 };
 const weekTrainingPlans = {
     '06.02-12.02': {
-        task1: 'otmaska',
-        task2: '2',
-        task3: '3',
+        task1: 'Оборот в балерину/бедра',
+        task2: 'Опасный мост',
+        task3: 'Икс/тейбл-топ',
     },
     '13.02-19.02': {
-        task1: '11',
-        task2: '22',
-        task3: '33',
+        task1: 'Титаник',
+        task2: 'Флаг',
+        task3: 'Стойка силовая',
     },
-}
+    '20.02-26.02': {
+        task1: 'Крутка с двойным облетом',
+        task2: 'Комбо',
+        task3: 'Бланшики',
+    },
+    '27.02-05.03': {
+        task1: 'Флаг цирковой',
+        task2: 'Динамика в шоулдере/перехваты',
+        task3: 'Джамилла',
+    },
+    '06.03-12.03': {
+        task1: 'Китайский шпагат',
+        task2: 'Рондат',
+        task3: 'Икс/тейбл-топ',
+    },
+    '13.03-19.03': {
+        task1: 'ДУЭТЫ',
+        task2: 'СФП',
+        // task3: '33',
+    },
+    '20.03-26.03': {
+        task1: 'Крутка в шоулдер',
+        task2: 'Флаг',
+        task3: 'Инста',
+    },
+    '27.03-02.04': {
+        task1: 'Комбо',
+        task2: 'Силовые опускания/подъемы',
+        task3: 'Стойка флажковая',
+    },
+    '03.04-09.04': {
+        task1: 'Машин Ган',
+        task2: 'Задняя аиша',
+        task3: 'Стойка силовая',
+    },
+};
 
 
 export const Main = () => {
@@ -31,7 +66,6 @@ export const Main = () => {
     const [week, setWeek] = useState('');
     const [warmUpPlan, setWarmUpPlan] = useState('');
     const [warmUpWithPoleMonths, setWarmUpWithPoleMonths] = useState('');
-
     const [task1Description, setTask1Description] = useState('');
     const [task2Description, setTask2Description] = useState('');
     const [task3Description, setTask3Description] = useState('');
@@ -39,12 +73,15 @@ export const Main = () => {
     const handleLevelChange = (value: string) => {
         setLevel(value)
     };
+
     const handleWeekChange = (value: string) => {
         setWeek(value)
     };
+
     const handleWarmUpPlan = (value: string) => {
         setWarmUpPlan(value)
     };
+
     const handleWarmUpWithPole = (value: string) => {
         setWarmUpWithPoleMonths(value)
     };
@@ -52,9 +89,11 @@ export const Main = () => {
     const handleTask1DescriptionChange = (text: string) => {
         setTask1Description(text);
     };
+
     const handleTask2DescriptionChange = (text: string) => {
         setTask2Description(text);
     };
+
     const handleTask3DescriptionChange = (text: string) => {
         setTask3Description(text);
     };

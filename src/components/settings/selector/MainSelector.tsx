@@ -15,7 +15,7 @@ export const BasicSelector = ({dataArray, title, value, onChange}: PropsType) =>
     }
     return (
         <div>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <FormControl fullWidth>
                 <InputLabel
                 ></InputLabel>

@@ -3,7 +3,7 @@
     justify-content: space-around;
     background-color: #f9f9f9;
     align-self: stretch;
-    padding: 140px;
+    padding: 40px 140px;
 }
 
 .paperBlock {
@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 520px) {
     .mainContainer {
-        padding: 0px;
+        padding: 0;
         flex-direction: column;
         align-items: center;
     }
