@@ -1,0 +1,13 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    align-self: stretch;
+    padding: 140px;
+}
+
+.paperBlock {
+    width: 400px;
+    background-color: #fff;
+    padding: 40px;
+}
