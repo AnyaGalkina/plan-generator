@@ -9,7 +9,7 @@ export const StyledTextField = ({onChange}: PropsType) => {
         <TextField
             multiline
             fullWidth
-            rows={4}
+            rows={3}
             onChange={onChange}
         />
     );

@@ -39,8 +39,7 @@ export const FinalText = ({
             </div>
 
             <div id={'finalText'}>
-                <h3>План на следующую тренировку.</h3>
-
+                <h3 style={{margin: '5px 0'}}>План на следующую тренировку.</h3>
                 <div>
                     <span>Программа недели </span><span>{week}:</span>
                 </div>
@@ -62,16 +61,16 @@ export const FinalText = ({
 
                     <h3>Основная часть тренировки:</h3>
                     <p>
-                        <h4>1. {task1}</h4>
+                        <h4 style={{margin: '5px 0'}}>1. {task1}</h4>
                         <div>{task1Description}</div>
                     </p>
                     <p>
-                        <h4>2. {task2}</h4>
+                        <h4 style={{margin: '5px 0'}}>2. {task2}</h4>
                         <div>{task2Description}</div>
                     </p>
                     <p>
                         {task3 &&
-                            <h4> 3. {weekTrainingPlans[week].task3}</h4>
+                            <h4 style={{margin: '5px 0'}}> 3. {weekTrainingPlans[week].task3}</h4>
                         }
                         <div>{task3Description}</div>
                     </p>
