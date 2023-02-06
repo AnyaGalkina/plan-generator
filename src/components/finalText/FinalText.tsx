@@ -6,10 +6,11 @@ import {Title} from './title/Title';
 import {INTRO} from '../../App';
 import {WarmUpIntro} from '../intro/WarmUpIntro';
 import {Trick} from './trick/Trick';
+import {TrainingPlansType} from '../../data/data';
 
 type PropsType = {
-    weekTrainingPlans?: any;
-    warmUpWithPolePlan?: any;
+    weekTrainingPlans: TrainingPlansType;
+    warmUpWithPolePlan?: TrainingPlansType;
 }
 
 export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: PropsType) => {
@@ -21,7 +22,9 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
     const task2Description = useAppSelector(state => state.settings.task2Description);
     const task3Description = useAppSelector(state => state.settings.task3Description);
 
-    const {task3, task2, task1, warmUpMonths} = week && weekTrainingPlans[week];
+    const {task3, task2, task1, warmUpMonths} = weekTrainingPlans && weekTrainingPlans[week];
+
+    const isFitWarmUpPlanShown = warmUpMonths && warmUpWithPolePlan;
 
     const introTricksPlan = ['Крутки', 'Лазы', task1, task2, 'СФП'];
 
@@ -56,12 +59,12 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
                         <p>
                             <span> — Пилонная разминка: </span>
                             <div>
-                                <span>1. {warmUpMonths && warmUpWithPolePlan[warmUpMonths].task1}</span>
+                                <span>1. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task1}</span>
                             </div>
                             <div>
-                                <span>2. {warmUpMonths && warmUpWithPolePlan[warmUpMonths].task2} </span>
+                                <span>2. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task2} </span>
                             </div>
-                            <div>3. {warmUpMonths && warmUpWithPolePlan[warmUpMonths].task3}</div>
+                            <div>3. {isFitWarmUpPlanShown &&  warmUpWithPolePlan[warmUpMonths].task3}</div>
                         </p>
 
                         <p>
@@ -77,10 +80,10 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
                 <p>⁃ Заминка</p>
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'end'}}>
-                <Button style={{margin: '40px 0', background: '#85c9cf'}} variant={'contained'}
-                        onClick={onCopyClick}>
-                    Copy Text
+            <div className={styles.buttonBlock}>
+                <Button style={{margin: '40px 0', background: '#85c9cf'}}
+                        variant={'contained'}
+                        onClick={onCopyClick}> Copy Text
                 </Button>
             </div>
 

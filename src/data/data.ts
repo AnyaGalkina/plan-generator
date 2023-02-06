@@ -1,5 +1,17 @@
+export type TrainingPlanType =  {
+    task1: string,
+    task2: string;
+    task3?: string;
+    warmUpMonths?: string
+};
+
+export type TrainingPlansType = {
+    [key: string]: TrainingPlanType
+}
+
 //INTRO
-export const weekTrainingPlansIntro = {
+
+export const weekTrainingPlansIntro: TrainingPlansType = {
     'неделя А': {
         task1: 'Бедра',
         task2: 'Рогатка',
@@ -19,7 +31,7 @@ export const weekTrainingPlansIntro = {
 
 //FIT 2
 
-export const warmUpWithPolePlanFit2 = {
+export const warmUpWithPolePlanFit2: TrainingPlansType = {
     'январь-февраль': {
         task1: 'Раскачка с подъемом',
         task2: 'Шоудеры с выходом в коленный зацеп',
@@ -33,7 +45,7 @@ export const warmUpWithPolePlanFit2 = {
 };
 
 
-export const weekTrainingPlansFit2 = {
+export const weekTrainingPlansFit2: TrainingPlansType = {
     '06.02-12.02': {
         task1: 'Оборот в балерину/бедра',
         task2: 'Опасный мост',

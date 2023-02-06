@@ -7,6 +7,7 @@ import {useAppSelector} from '../../hooks/hooks';
 import {useDispatch} from 'react-redux';
 import {setLevel, setWarmUpPlan, setWeek} from '../../store/settings-reducer';
 import {INTRO} from '../../App';
+import {TrainingPlansType} from '../../data/data';
 
 const levels = ['Intro', 'Fit 1', 'Fit 2'];
 const weeks = ['06.02-12.02', '13.02-19.02', '20.02-26.02', '27.02-05.03', '06.03-12.03', '13.03-19.03', '20.03-26.03', '27.03-02.04', '03.04-09.04'];
@@ -14,7 +15,7 @@ const weeksIntro = ['неделя А', 'неделя Б', 'неделя В'];
 const warmUp = ['универсальная', 'на продольник', 'на складку', 'на спину'];
 
 type PropsType = {
-    weekTrainingPlans: any
+    weekTrainingPlans: TrainingPlansType;
 }
 
 export const Settings = ({weekTrainingPlans}: PropsType) => {

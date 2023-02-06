@@ -12,6 +12,11 @@
     padding: 40px;
 }
 
+.buttonBlock {
+    display: flex;
+    justify-content: end;
+}
+
 @media screen and (max-width: 1200px) {
     .mainContainer {
         padding: 40px;
