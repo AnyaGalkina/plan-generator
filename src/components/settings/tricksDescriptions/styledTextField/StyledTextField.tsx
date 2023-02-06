@@ -1,10 +1,10 @@
-import React, {ChangeEvent} from 'react';
+import React, {ChangeEvent, memo} from 'react';
 import {TextField} from '@mui/material';
 
 type PropsType = {
     onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
-export const StyledTextField = ({onChange}: PropsType) => {
+export const StyledTextField = memo(({onChange}: PropsType) => {
     return (
         <TextField
             multiline
@@ -13,4 +13,4 @@ export const StyledTextField = ({onChange}: PropsType) => {
             onChange={onChange}
         />
     );
-};
+});
