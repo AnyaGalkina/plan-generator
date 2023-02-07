@@ -4,9 +4,9 @@ import styles from '../Main.module.css';
 import {useAppSelector} from '../../hooks/hooks';
 import {Title} from './title/Title';
 import {INTRO} from '../../App';
-import {WarmUpIntro} from '../intro/WarmUpIntro';
-import {Trick} from './trick/Trick';
 import {TrainingPlansType} from '../../data/data';
+import {IntroFinalPlanDetails} from './finalPlanContent/IntroFinalPlanDetails';
+import {FitFinalPlanDetails} from './finalPlanContent/FitFinalPlanDetails';
 
 type PropsType = {
     weekTrainingPlans: TrainingPlansType;
@@ -18,15 +18,9 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
     const level = useAppSelector(state => state.settings.level);
     const week = useAppSelector(state => state.settings.week);
     const warmUpPlan = useAppSelector(state => state.settings.warmUpPlan);
-    const task1Description = useAppSelector(state => state.settings.task1Description);
-    const task2Description = useAppSelector(state => state.settings.task2Description);
-    const task3Description = useAppSelector(state => state.settings.task3Description);
 
-    const {task3, task2, task1, warmUpMonths} = weekTrainingPlans && weekTrainingPlans[week];
-
-    const isFitWarmUpPlanShown = warmUpMonths && warmUpWithPolePlan;
-
-    const introTricksPlan = ['Крутки', 'Лазы', task1, task2, 'СФП'];
+    //@ts-ignore
+    const {task3, task2, task1, warmUpMonths} = weekTrainingPlans && week && weekTrainingPlans[week];
 
     const onCopyClick = () => {
         let copyText: any = document.getElementById('finalText');
@@ -41,41 +35,15 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
                     <h3 style={{margin: '0 0 6px 0'}}>План на следующую тренировку.</h3>
                     <span>Программа недели: </span><span>{week}</span>
                 </p>
-
                 {level === INTRO
-                    ? <>
-                        <WarmUpIntro/>
-
-                        <h3>Основная часть тренировки:</h3>
-                        {introTricksPlan.map((el, index) => {
-                            return <Trick key={index} index={index} trickTitle={el}/>
-                        })
-                        }
-                    </>
-                    : <>
-                        <p>
-                            <span> — Разминка: выбери видео "{warmUpPlan}"</span>
-                        </p>
-                        <p>
-                            <span> — Пилонная разминка: </span>
-                            <div>
-                                <span>1. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task1}</span>
-                            </div>
-                            <div>
-                                <span>2. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task2} </span>
-                            </div>
-                            <div>3. {isFitWarmUpPlanShown &&  warmUpWithPolePlan[warmUpMonths].task3}</div>
-                        </p>
-
-                        <p>
-                            <h3>Основная часть тренировки:</h3>
-                            <Trick index={1} trickTitle={task1} taskDescription={task1Description}/>
-                            <Trick index={2} trickTitle={task2} taskDescription={task2Description}/>
-                            {task3 &&
-                                <Trick index={3} trickTitle={task3} taskDescription={task3Description}/>
-                            }
-                        </p>
-                    </>
+                    ? <IntroFinalPlanDetails task1={task1} task2={task2}/>
+                    : <FitFinalPlanDetails warmUpPlan={warmUpPlan}
+                                           warmUpWithPolePlan={warmUpWithPolePlan}
+                                           warmUpMonths={warmUpMonths}
+                                           task1={task1}
+                                           task2={task2}
+                                           task3={task3}
+                    />
                 }
                 <p>⁃ Заминка</p>
             </div>

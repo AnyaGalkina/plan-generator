@@ -1,0 +1,50 @@
+import React from 'react';
+import {Trick} from '../trick/Trick';
+import {useAppSelector} from '../../../hooks/hooks';
+import {TrainingPlansType} from '../../../data/data';
+
+type PropsType = {
+    warmUpPlan: string;
+    warmUpMonths?: string;
+    warmUpWithPolePlan?: TrainingPlansType;
+    task1: string;
+    task2: string;
+    task3?: string;
+}
+
+export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePlan, task1, task2, task3}: PropsType) => {
+
+    const task1Description = useAppSelector(state => state.settings.task1Description);
+    const task2Description = useAppSelector(state => state.settings.task2Description);
+    const task3Description = useAppSelector(state => state.settings.task3Description);
+
+    const isFitWarmUpPlanShown = warmUpMonths && warmUpWithPolePlan;
+
+
+    return (
+        <>
+            <p>
+                <span> — Разминка: выбери видео "{warmUpPlan}"</span>
+            </p>
+            <p>
+                <span> — Пилонная разминка: </span>
+                <div>
+                    <span>1. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task1}</span>
+                </div>
+                <div>
+                    <span>2. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task2} </span>
+                </div>
+                <div>3. {isFitWarmUpPlanShown &&  warmUpWithPolePlan[warmUpMonths].task3}</div>
+            </p>
+
+            <p>
+                <h3>Основная часть тренировки:</h3>
+                <Trick index={1} trickTitle={task1} taskDescription={task1Description}/>
+                <Trick index={2} trickTitle={task2} taskDescription={task2Description}/>
+                {task3 &&
+                    <Trick index={3} trickTitle={task3} taskDescription={task3Description}/>
+                }
+            </p>
+        </>
+    );
+};
