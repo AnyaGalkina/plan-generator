@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Main} from './components/Main';
-import {useAppSelector} from './hooks/hooks';
+import {useAppSelector} from './store/hooks/hooks';
 import {warmUpWithPolePlanFit2, weekTrainingPlansFit2, weekTrainingPlansIntro} from './data/data';
 
 const FIT_2 = 'Fit 2';

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Button, Paper} from '@mui/material';
 import styles from '../Main.module.css';
-import {useAppSelector} from '../../hooks/hooks';
+import {useAppSelector} from '../../store/hooks/hooks';
 import {Title} from './title/Title';
 import {INTRO} from '../../App';
 import {TrainingPlansType} from '../../data/data';
-import {IntroFinalPlanDetails} from './finalPlanContent/IntroFinalPlanDetails';
-import {FitFinalPlanDetails} from './finalPlanContent/FitFinalPlanDetails';
+import {IntroFinalPlanDetails} from './finalPlanContent/intro/IntroFinalPlanDetails';
+import {FitFinalPlanDetails} from './finalPlanContent/fit/FitFinalPlanDetails';
 
 type PropsType = {
     weekTrainingPlans: TrainingPlansType;

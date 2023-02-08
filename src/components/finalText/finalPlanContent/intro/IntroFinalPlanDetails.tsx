@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
-import {WarmUpIntro} from '../../intro/WarmUpIntro';
-import {Trick} from '../trick/Trick';
+import {WarmUpIntro} from './WarmUpIntro';
+import {Trick} from '../../trick/Trick';
 
 type PropsType = {
     task1: string;

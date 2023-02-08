@@ -1,7 +1,7 @@
 import React from 'react';
-import {Trick} from '../trick/Trick';
-import {useAppSelector} from '../../../hooks/hooks';
-import {TrainingPlansType} from '../../../data/data';
+import {Trick} from '../../trick/Trick';
+import {useAppSelector} from '../../../../store/hooks/hooks';
+import {TrainingPlansType} from '../../../../data/data';
 
 type PropsType = {
     warmUpPlan: string;
