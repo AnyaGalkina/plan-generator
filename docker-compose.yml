@@ -1,0 +1,10 @@
+#latest version
+version: '3.9'
+services:
+  tricks-school:
+    container_name: tricks-school
+    build:
+      context: .
+    restart: always
+    ports: 
+      - 3000:3000
