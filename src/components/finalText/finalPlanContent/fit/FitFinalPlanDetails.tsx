@@ -39,10 +39,10 @@ export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePla
 
             <p>
                 <h3>Основная часть тренировки:</h3>
-                <Trick index={1} trickTitle={task1} taskDescription={task1Description}/>
-                <Trick index={2} trickTitle={task2} taskDescription={task2Description}/>
+                <Trick index={0} trickTitle={task1} taskDescription={task1Description}/>
+                <Trick index={1} trickTitle={task2} taskDescription={task2Description}/>
                 {task3 &&
-                    <Trick index={3} trickTitle={task3} taskDescription={task3Description}/>
+                    <Trick index={2} trickTitle={task3} taskDescription={task3Description}/>
                 }
             </p>
         </>
