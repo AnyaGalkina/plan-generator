@@ -77,7 +77,7 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
         warmUpMonths: 'март-апрель',
     },
     '13.03-19.03': {
-        task1: 'ДУЭТЫ',
+        task1: 'Комбо',
         task2: 'СФП',
         warmUpMonths: 'март-апрель',
         // task3: '33',
@@ -150,7 +150,7 @@ export const weekTrainingPlansFit2: TrainingPlansType = {
         warmUpMonths: 'март-апрель',
     },
     '13.03-19.03': {
-        task1: 'ДУЭТЫ',
+        task1: 'Комбо',
         task2: 'СФП',
         warmUpMonths: 'март-апрель',
         // task3: '33',
