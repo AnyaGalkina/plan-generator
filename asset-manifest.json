@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/plan-generator/static/css/main.3a1e0943.css",
-    "main.js": "/plan-generator/static/js/main.c921f76a.js",
+    "main.js": "/plan-generator/static/js/main.8a1fed06.js",
     "static/js/787.4ece5d6f.chunk.js": "/plan-generator/static/js/787.4ece5d6f.chunk.js",
     "index.html": "/plan-generator/index.html",
     "main.3a1e0943.css.map": "/plan-generator/static/css/main.3a1e0943.css.map",
-    "main.c921f76a.js.map": "/plan-generator/static/js/main.c921f76a.js.map",
+    "main.8a1fed06.js.map": "/plan-generator/static/js/main.8a1fed06.js.map",
     "787.4ece5d6f.chunk.js.map": "/plan-generator/static/js/787.4ece5d6f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a1e0943.css",
-    "static/js/main.c921f76a.js"
+    "static/js/main.8a1fed06.js"
   ]
 }
