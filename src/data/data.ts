@@ -57,7 +57,7 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
         task3: 'Стойка боковая',
         warmUpMonths: 'март-апрель',
     },
-    '24.10-30.10': {
+    '24.04-30.04': {
         task1: 'Шпагат Джамиллы',
         task2: 'Карандашик',
         task3: 'Флаг',
@@ -208,7 +208,7 @@ export const weekTrainingPlansFit2: TrainingPlansType = {
         task3: 'Инста-штучка',
         warmUpMonths: 'март-апрель',
     },
-    '24.04-30.04': {
+    '24.04-30.10': {
         task1: 'Комбо',
         task2: 'Стойка флажковая',
         task3: 'Силовые опускания/выходы',
