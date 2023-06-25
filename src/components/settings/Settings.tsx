@@ -5,13 +5,35 @@ import {BasicSelector} from './selector/MainSelector';
 import {TricksDescriptions} from './tricksDescriptions/TricksDescriptions';
 import {useAppSelector} from '../../store/hooks/hooks';
 import {useDispatch} from 'react-redux';
-import {setLevel, setWarmUpPlan, setWeek} from '../../store/settings-reducer';
+import {
+    setLevel,
+    setWarmUpPlan,
+    setWeek
+} from '../../store/settings-reducer';
 import {INTRO} from '../../App';
 import {TrainingPlansType} from '../../data/data';
 
 const levels = ['Intro', 'Fit 1', 'Fit 2'];
-const weeks = ['17.04-23.04', '24.04-30.04', '01.05-07.05', '08.05-14.05', '15.05-21.05', '22.05-28.05', '29.05-04.06',
- '05.06-11.06', '12.06-18.06', '19.06-25.06', '26.06-02.07'];
+const weeks = [
+    '26.06-02.07',
+    '03.07-09.07',
+    '10.07-16.07',
+    '17.07-23.07',
+    '24.07-30.07',
+    '31.07-06.08',
+    '07.08-13.08',
+    '14.08-20.08',
+    '21.08-27.08',
+    '28.08-03.09',
+
+    //!!!!Just uncomment this to get the full list of weeks
+
+    // '04.09-10.09',
+    // '11.09-17.09',
+    // '18.09-24.09',
+    // '25.09-01.10',
+    // '02.10-08.10',
+];
 const weeksIntro = ['неделя А', 'неделя Б', 'неделя В'];
 const warmUp = ['универсальная', 'на продольник', 'на складку', 'на спину'];
 
@@ -27,7 +49,7 @@ export const Settings = ({weekTrainingPlans}: PropsType) => {
     const warmUpPlan = useAppSelector(state => state.settings.warmUpPlan);
 
     const handleLevelChange = (value: string) => {
-        dispatch(setWeek(''));
+        // dispatch(setWeek(''));
         dispatch(setLevel(value));
     }
 
