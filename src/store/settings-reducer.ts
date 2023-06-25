@@ -11,13 +11,14 @@ type InitialStateType = typeof initialState;
 
 export const settingsReducer = (state: InitialStateType = initialState, action: ActionType): InitialStateType => {
     switch (action.type) {
-        case 'SET_LEVEL':
         case 'SET_WEEK':
         case 'SET_WARM_UP_PLAN':
         case 'SET_TASK_1':
         case 'SET_TASK_2':
         case 'SET_TASK_3':
             return {...state, ...action.payload};
+        case 'SET_LEVEL':
+            return {...state, ... action.payload, week: '', task1Description: '', task2Description: '', task3Description: ''};
         default:
             return state
     }
