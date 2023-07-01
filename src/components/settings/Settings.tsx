@@ -15,7 +15,6 @@ import {TrainingPlansType} from '../../data/data';
 
 const levels = ['Intro', 'Fit 1', 'Fit 2'];
 const weeks = [
-    '26.06-02.07',
     '03.07-09.07',
     '10.07-16.07',
     '17.07-23.07',
