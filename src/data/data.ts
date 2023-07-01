@@ -78,14 +78,14 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
     },
     '24.07-30.07': {
         task1: 'Крутка чашечкой',
-        task2: 'Балерина на крутяшке (усл: капецио)',
+        task2: 'Балерина на крутяшке',
         task3: 'Флаг',
         warmUpMonths: actualWarmUpMonths,
     },
     '31.07-06.08': {
         task1: 'Комбо',
         task2: 'Стойка лопатками к пилону на двух руках',
-        task3: '(СФП)',
+        task3: 'СФП',
         warmUpMonths: actualWarmUpMonths,
     },
     '07.08-13.08': {
@@ -96,7 +96,7 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
     },
     '14.08-20.08': {
         task1: 'Инста-штучка',
-        task2: 'Карандашик (усл: с пола)',
+        task2: 'Карандашик',
         task3: 'Китайский флаг',
         warmUpMonths: actualWarmUpMonths,
     },
@@ -109,18 +109,18 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
     '28.08-03.09': {
         task1: 'Крутка чашечкой',
         task2: 'Комбо',
-        task3: '(СФП)',
+        task3: 'СФП',
         warmUpMonths: actualWarmUpMonths,
     },
     // '04.09-10.09': {
-    //     task1: 'Брассманки (усл: оригами, эрос, часики)',
+    //     task1: 'Брассманки',
     //     task2: 'Стойка полуфлаговая',
-    //     task3: 'Шпагат Джамиллы (усл: на балансе)',
+    //     task3: 'Шпагат Джамиллы',
     //     warmUpMonths: actualWarmUpMonths,
     // },
     // '11.09-17.09': {
-    //     task1: 'ДУЭТЫ',
-    //     task2: '+ СФП',
+    //     task1: 'Комбо',
+    //     task2: 'СФП',
     //     task3: '',
     //     warmUpMonths: actualWarmUpMonths,
     // },
@@ -132,14 +132,14 @@ export const weekTrainingPlansFit1: TrainingPlansType = {
     // },
     // '25.09-01.10': {
     //     task1: 'Крутка с вылетом',
-    //     task2: 'Супермен (усл: переходы, обрывы, бантик, санрайз)',
+    //     task2: 'Супермен',
     //     task3: 'Флаг',
     //     warmUpMonths: actualWarmUpMonths,
     // },
     // '02.10-08.10': {
     //     task1: 'Комбо',
     //     task2: 'Стойка спиной к пилону',
-    //     task3: '(СФП)',
+    //     task3: 'СФП',
     //     warmUpMonths: actualWarmUpMonths,
     // },
 };
@@ -165,12 +165,6 @@ export const warmUpWithPolePlanFit2: TrainingPlansType = {
 };
 
 export const weekTrainingPlansFit2: TrainingPlansType = {
-    '26.06-02.07': {
-        task1: 'Кокон/бильман/перевернутый бильман',
-        task2: 'Задняя аиша',
-        task3: 'Стойка силовая',
-        warmUpMonths: actualWarmUpMonths,
-    },
     '03.07-09.07': {
         task1: 'Крутка с проведением корпуса',
         task2: 'Флаг',
@@ -203,7 +197,7 @@ export const weekTrainingPlansFit2: TrainingPlansType = {
     },
     '07.08-13.08': {
         task1: 'Оборот в балерину/бедра',
-        task2: 'Опасный мост —> на одной',
+        task2: 'Опасный мост',
         task3: 'Икс/тейбл-топ',
         warmUpMonths: actualWarmUpMonths,
     },
@@ -221,26 +215,26 @@ export const weekTrainingPlansFit2: TrainingPlansType = {
     },
     '28.08-03.09': {
         task1: 'Флаг цирковой',
-        task2: 'Динамика в шоулдере/перехваты',
-        task3: 'Джамилла (с верхней рукой)',
+        task2: 'Динамика в шоулдере',
+        task3: 'Джамилла',
         warmUpMonths: actualWarmUpMonths,
     },
     // '04.09-10.09': {
     //     task1: 'Китайский шпагат',
-    //     task2: 'Рондат (подмышкой или в мужском)',
+    //     task2: 'Рондат',
     //     task3: 'Икс/тейбл-топ',
     //     warmUpMonths: actualWarmUpMonths,
     // },
     // '11.09-17.09': {
-    //     task1: 'ДУЭТЫ',
-    //     task2: '+ СФП',
+    //     task1: 'Комбо',
+    //     task2: 'СФП',
     //     task3: '',
     //     warmUpMonths: actualWarmUpMonths,
     // },
     // '18.09-24.09': {
     //     task1: 'Крутка в шоулдер',
     //     task2: 'Флаг',
-    //     task3: 'Инста',
+    //     task3: 'Инста-штучка',
     //     warmUpMonths: actualWarmUpMonths,
     // },
     // '25.09-01.10': {
