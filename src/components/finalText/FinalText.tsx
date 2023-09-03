@@ -43,6 +43,7 @@ export const FinalText = React.memo(({weekTrainingPlans, warmUpWithPolePlan}: Pr
                                            task1={task1}
                                            task2={task2}
                                            task3={task3}
+                                           week={week}
                     />
                 }
                 <p>⁃ Заминка</p>

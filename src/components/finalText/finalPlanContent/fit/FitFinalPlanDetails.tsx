@@ -10,9 +10,10 @@ type PropsType = {
     task1: string;
     task2: string;
     task3?: string;
+    week: string;
 }
 
-export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePlan, task1, task2, task3}: PropsType) => {
+export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePlan, week, task1, task2, task3}: PropsType) => {
 
     const task1Description = useAppSelector(state => state.settings.task1Description);
     const task2Description = useAppSelector(state => state.settings.task2Description);
@@ -39,6 +40,7 @@ export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePla
 
             <p>
                 <h3>Основная часть тренировки:</h3>
+                <p>Выбери раздел “программа недели” -{'>'} {week}</p>
                 <Trick index={0} trickTitle={task1} taskDescription={task1Description}/>
                 <Trick index={1} trickTitle={task2} taskDescription={task2Description}/>
                 {task3 &&
