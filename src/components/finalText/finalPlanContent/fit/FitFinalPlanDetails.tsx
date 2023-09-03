@@ -1,7 +1,7 @@
 import React from 'react';
 import {Trick} from '../../trick/Trick';
 import {useAppSelector} from '../../../../store/hooks/hooks';
-import {TrainingPlansType} from '../../../../data/data';
+import {actualWarmUpMonths, TrainingPlansType} from '../../../../data/data';
 
 type PropsType = {
     warmUpPlan: string;
@@ -24,10 +24,10 @@ export const FitFinalPlanDetails = ({warmUpPlan, warmUpMonths, warmUpWithPolePla
     return (
         <>
             <p>
-                <span> — Разминка: выбери видео "{warmUpPlan}"</span>
+                <span> — Разминка: выбери раздел "{warmUpPlan}"</span>
             </p>
             <p>
-                <span> — Пилонная разминка: </span>
+                <span> — Пилонная разминка "{actualWarmUpMonths}": </span>
                 <div>
                     <span>1. {isFitWarmUpPlanShown && warmUpWithPolePlan[warmUpMonths].task1}</span>
                 </div>
