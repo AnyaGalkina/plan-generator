@@ -57,81 +57,86 @@ export const warmUpWithPolePlanFit1: TrainingPlansType = {
     //     task2: 'рогатки, подъем и опускание силой',
     //     task3: 'тюльпан во вращении на статике',
     // },
-    'ноябрь-декабрь': {
-        task1: 'стульчик на крутяшке',
-        task2: 'рогатки на крутяшке',
-        task3: 'тюльпан на крутяшке',
+    // 'ноябрь-декабрь': {
+    //     task1: 'стульчик на крутяшке',
+    //     task2: 'рогатки на крутяшке',
+    //     task3: 'тюльпан на крутяшке',
+    // },
+    'январь-февраль': {
+        task1: 'стульчик на статике',
+        task2: 'рогатки с коленным зацепом и подъемом наверх',
+        task3: 'тюльпан на статике',
     }
 };
 
 
-export const actualWarmUpMonths = 'ноябрь-декабрь';
+export const actualWarmUpMonths = 'январь-февраль';
 
 export const weekTrainingPlansFit1: TrainingPlansType = {
 
-    '30.10-05.11': {
-        task1: 'Крутка чашечкой',
-        task2: 'Комбо',
-        task3: 'СФП',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '06.11-12.11': {
-        task1: 'Купидон',
-        task2: 'Стойка лопатками к пилону на двух руках',
-        task3: 'Флаг',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '13.11-19.11': {
-        task1: 'Разворот в балерину на статике',
-        task2: 'Инста-штучка',
-        task3: 'Китайский флаг',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '20.11-26.11': {
-        task1: 'Крутка с вылетом',
-        task2: 'Шпагат аллегры',
-        task3: 'Супермен',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '27.11-03.12': {
-        task1: 'Комбо',
-        task2: 'Стойка полуфлаговая',
-        task3: 'СФП',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '04.12-10.12': {
-        task1: 'Крутка чашечкой',
-        task2: 'Мост',
-        task3: 'Оттяжка',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '11.12-17.12': {
-        task1: 'Смена бока в висе',
-        task2: 'Инста-штучка',
-        task3: 'Флаг',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '18.12-24.12': {
-        task1: 'Поперечка (складка/шпагат)',
-        task2: 'Питер пен',
-        task3: 'Стойка спиной к пилону',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '25.12-31.12': {
-        task1: 'Обрыв из мартини',
-        task2: 'Шпагаты из брассманки',
-        task3: 'Флаг',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
+    // '30.10-05.11': {
+    //     task1: 'Крутка чашечкой',
+    //     task2: 'Комбо',
+    //     task3: 'СФП',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '06.11-12.11': {
+    //     task1: 'Купидон',
+    //     task2: 'Стойка лопатками к пилону на двух руках',
+    //     task3: 'Флаг',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '13.11-19.11': {
+    //     task1: 'Разворот в балерину на статике',
+    //     task2: 'Инста-штучка',
+    //     task3: 'Китайский флаг',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '20.11-26.11': {
+    //     task1: 'Крутка с вылетом',
+    //     task2: 'Шпагат аллегры',
+    //     task3: 'Супермен',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '27.11-03.12': {
+    //     task1: 'Комбо',
+    //     task2: 'Стойка полуфлаговая',
+    //     task3: 'СФП',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '04.12-10.12': {
+    //     task1: 'Крутка чашечкой',
+    //     task2: 'Мост',
+    //     task3: 'Оттяжка',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '11.12-17.12': {
+    //     task1: 'Смена бока в висе',
+    //     task2: 'Инста-штучка',
+    //     task3: 'Флаг',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '18.12-24.12': {
+    //     task1: 'Поперечка (складка/шпагат)',
+    //     task2: 'Питер пен',
+    //     task3: 'Стойка спиной к пилону',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '25.12-31.12': {
+    //     task1: 'Обрыв из мартини',
+    //     task2: 'Шпагаты из брассманки',
+    //     task3: 'Флаг',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
     '08.01-14.01': {
         task1: 'Крутка с вылетом',
         task2: 'Комбо',
@@ -213,79 +218,85 @@ export const warmUpWithPolePlanFit2: TrainingPlansType = {
     //     task2: 'Шоулдеры силой, подъемы и опускания',
     //     task3: 'Тюльпан во флаг на статике',
     // },
-    'ноябрь-декабрь': {
-        task1: 'Солдатик на крутяшке',
-        task2: 'Шоулдеры с раскачки в группировку',
-        task3: 'Облет во флаг на статике',
+    // 'ноябрь-декабрь': {
+    //     task1: 'Солдатик на крутяшке',
+    //     task2: 'Шоулдеры с раскачки в группировку',
+    //     task3: 'Облет во флаг на статике',
+    // },
+    'январь-февраль': {
+        task1: 'Раскачка с подъемом',
+        task2: 'Шоудеры с выходом в коленный зацеп',
+        task3: 'Тюльпан во флаг',
     }
+
 };
 
 export const weekTrainingPlansFit2: TrainingPlansType = {
 
     //!!!!Just uncomment this to get the full list of weeks
 
-    '30.10-05.11': {
-        task1: 'Крутка с двойным облетом',
-        task2: 'Пегас',
-        task3: 'Инста-штучка',
-        warmUpMonths: actualWarmUpMonths,
-    },
-    '06.11-12.11': {
-        task1: 'Переворот через шоулдер',
-        task2: 'Шпагат Чебы',
-        task3: 'Икс/тейбл топ',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '13.11-19.11': {
-        task1: 'Комбо',
-        task2: 'Флаг',
-        task3: 'Стойка силовая',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '20.11-26.11': {
-        task1: 'Крутка через разворот в ленточном',
-        task2: 'Райская птица',
-        task3: 'Бланшики',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '27.11-03.12': {
-        task1: 'Рондат',
-        task2: 'Марион',
-        task3: 'Инста-штучка',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '04.12-10.12': {
-        task1: 'Комбо',
-        task2: 'Стойка флажковая',
-        task3: 'Силовые опускания/подъемы',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '11.12-17.12': {
-        task1: 'Крутка с выходом в шоулдер',
-        task2: 'Рашн лейбек',
-        task3: 'Флаг',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '18.12-24.12': {
-        task1: 'Машин Ган',
-        task2: 'Задняя аиша',
-        task3: 'Икс/Тейбл топ',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
-    '25.12-31.12': {
-        task1: 'элемент на спину',
-        task2: 'Серпантин',
-        task3: 'Стойка силовая',
-        warmUpMonths: actualWarmUpMonths,
-
-    },
+    // '30.10-05.11': {
+    //     task1: 'Крутка с двойным облетом',
+    //     task2: 'Пегас',
+    //     task3: 'Инста-штучка',
+    //     warmUpMonths: actualWarmUpMonths,
+    // },
+    // '06.11-12.11': {
+    //     task1: 'Переворот через шоулдер',
+    //     task2: 'Шпагат Чебы',
+    //     task3: 'Икс/тейбл топ',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '13.11-19.11': {
+    //     task1: 'Комбо',
+    //     task2: 'Флаг',
+    //     task3: 'Стойка силовая',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '20.11-26.11': {
+    //     task1: 'Крутка через разворот в ленточном',
+    //     task2: 'Райская птица',
+    //     task3: 'Бланшики',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '27.11-03.12': {
+    //     task1: 'Рондат',
+    //     task2: 'Марион',
+    //     task3: 'Инста-штучка',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '04.12-10.12': {
+    //     task1: 'Комбо',
+    //     task2: 'Стойка флажковая',
+    //     task3: 'Силовые опускания/подъемы',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '11.12-17.12': {
+    //     task1: 'Крутка с выходом в шоулдер',
+    //     task2: 'Рашн лейбек',
+    //     task3: 'Флаг',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '18.12-24.12': {
+    //     task1: 'Машин Ган',
+    //     task2: 'Задняя аиша',
+    //     task3: 'Икс/Тейбл топ',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
+    // '25.12-31.12': {
+    //     task1: 'элемент на спину',
+    //     task2: 'Серпантин',
+    //     task3: 'Стойка силовая',
+    //     warmUpMonths: actualWarmUpMonths,
+    //
+    // },
     '08.01-14.01': {
         task1: 'Крутка с проведением корпуса',
         task2: 'Инста-штучка',
