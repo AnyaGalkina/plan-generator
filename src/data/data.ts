@@ -9,6 +9,11 @@ export type TrainingPlansType = {
     [key: string]: TrainingPlanType
 }
 
+export const placeholderTest = 'Посмотри\n' +
+    'видео\n' +
+    'и сделай \n' +
+    'по 3 раза на каждую сторону.\n'
+
 export const weeks = [
 
     // '12.02-18.02',
@@ -403,12 +408,12 @@ export const weekTrainingPlansFit2: TrainingPlansType = {
     // },
     '04.03-10.03': {
         task1: 'Динамика в шоулдере/перехваты',
-        task2: 'Джамилла (с верхней рукой)',
+        task2: 'Джамилла',
         task3: 'Флаг на предплечье',
         warmUpMonths: actualWarmUpMonths
     },
     '11.03-17.03': {
-        task1: 'Рондат (подмышкой или в мужском)',
+        task1: 'Рондат',
         task2: 'Китайский шпагат',
         task3: 'Икс/тейбл-топ',
         warmUpMonths: actualWarmUpMonths
