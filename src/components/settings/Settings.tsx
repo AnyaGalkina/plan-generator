@@ -12,32 +12,9 @@ import {
 } from '../../store/settings-reducer';
 import {INTRO} from '../../App';
 import {TrainingPlansType} from '../../data/data';
+import {weeks} from '../../data/data';
 
 const levels = ['Intro', 'Fit 1', 'Fit 2'];
-const weeks = [
-    // '30.10-05.11',
-    // '06.11-12.11',
-    // '13.11-19.11',
-    // '20.11-26.11',
-    // '27.11-03.12',
-    // '04.12-10.12',
-    // '11.12-17.12',
-    // '18.12-24.12',
-    // '25.12-31.12',
-
-    //!!!!Just uncomment this to get the full list of weeks
-
-    // '01.01-07.01',
-
-    '08.01-14.01',
-    '15.01-21.01',
-    '22.01-28.01',
-    '29.01-04.02',
-    '05.02-11.02',
-    '12.02-18.02',
-    '19.02-25.02',
-    '26.02-03.03',
-];
 
 
 
