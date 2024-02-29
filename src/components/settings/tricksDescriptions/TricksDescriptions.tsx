@@ -6,17 +6,21 @@ import {useDispatch} from 'react-redux';
 type PropsType = {
     week: string;
     weekTrainingPlans: any;
+    placeholderText: string
 }
 
 
-export const TricksDescriptions = memo(({
-                                week,
-                                weekTrainingPlans,
-                            }: PropsType) => {
+export const TricksDescriptions = ({
+                                            week,
+                                            weekTrainingPlans, placeholderText
+                                        }: PropsType) => {
 
     const dispatch = useDispatch();
     const {task3, task1, task2} = week && weekTrainingPlans[week];
-
+    console.log(placeholderText)
+    // dispatch(setTask1Description(placeholderText));
+    // dispatch(setTask2Description(placeholderText));
+    // dispatch(setTask3Description(placeholderText));
 
     const handleTask1DescriptionChange = useCallback((event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         let text = event.currentTarget.value;
@@ -37,15 +41,15 @@ export const TricksDescriptions = memo(({
         <div>
             <h3>Основная часть тренировки:</h3>
             <h4>1. {task1}</h4>
-            <StyledTextField onChange={handleTask1DescriptionChange}/>
+            <StyledTextField onChange={handleTask1DescriptionChange} placeholder={placeholderText}/>
             <h4>2. {task2}</h4>
-            <StyledTextField onChange={handleTask2DescriptionChange}/>
+            <StyledTextField onChange={handleTask2DescriptionChange} placeholder={placeholderText}/>
             {task3 &&
                 <>
                     <h4>3. {task3}</h4>
-                    <StyledTextField onChange={handleTask3DescriptionChange}/>
+                    <StyledTextField onChange={handleTask3DescriptionChange} placeholder={placeholderText}/>
                 </>
             }
         </div>
     );
-});
+};

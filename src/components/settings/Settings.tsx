@@ -1,5 +1,5 @@
-import React from 'react';
-import {Paper} from '@mui/material';
+import React, {memo, useState} from 'react';
+import {Checkbox, Paper} from '@mui/material';
 import styles from '../Main.module.css';
 import {BasicSelector} from './selector/MainSelector';
 import {TricksDescriptions} from './tricksDescriptions/TricksDescriptions';
@@ -11,12 +11,9 @@ import {
     setWeek
 } from '../../store/settings-reducer';
 import {INTRO} from '../../App';
-import {TrainingPlansType} from '../../data/data';
-import {weeks} from '../../data/data';
+import {weeks, placeholderTest, TrainingPlansType} from '../../data/data';
 
 const levels = ['Intro', 'Fit 1', 'Fit 2'];
-
-
 
 
 const weeksIntro = ['неделя А', 'неделя Б', 'неделя В'];
@@ -26,15 +23,17 @@ type PropsType = {
     weekTrainingPlans: TrainingPlansType;
 }
 
-export const Settings = ({weekTrainingPlans}: PropsType) => {
+export const Settings =  ({weekTrainingPlans}: PropsType) => {
 
     const dispatch = useDispatch();
     const level = useAppSelector(state => state.settings.level);
     const week = useAppSelector(state => state.settings.week);
     const warmUpPlan = useAppSelector(state => state.settings.warmUpPlan);
 
+    const [newText, setText] = useState('');
+    const [checked, setChecked] = useState(false);
+
     const handleLevelChange = (value: string) => {
-        // dispatch(setWeek(''));
         dispatch(setLevel(value));
     }
 
@@ -42,6 +41,10 @@ export const Settings = ({weekTrainingPlans}: PropsType) => {
         dispatch(setWeek(value));
     };
 
+    const handleOnCheckboxChange = () => {
+        checked ? setText('') : setText(placeholderTest)
+        setChecked(!checked)
+    }
     const handleWarmUpPlan = (value: string) => {
         dispatch(setWarmUpPlan(value));
     };
@@ -73,8 +76,11 @@ export const Settings = ({weekTrainingPlans}: PropsType) => {
                                    onChange={handleWarmUpPlan}
                                    value={warmUpPlan}
                     />
+                    <span>Добавить placeholder </span>
+                    <Checkbox onChange={handleOnCheckboxChange} checked={checked}/>
                     <TricksDescriptions week={week}
                                         weekTrainingPlans={weekTrainingPlans}
+                                        placeholderText={newText}
                     />
                 </>
             }
